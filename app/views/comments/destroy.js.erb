@@ -1,3 +1,5 @@
 <%# console.log("I am destroy.js.erb") %>
 
-$("#comment_<%= @comment.id %>").fadeOut();
+$("#<%= dom_id(@comment) %>").fadeOut(function() {
+  $(this).remove();
+});
